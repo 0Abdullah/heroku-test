@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  font-family: poppins, helvetica, sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(12, 11, 20);
+}
+
+.board {
+  /* background: blue; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  height: 700px;
+  box-sizing: content-box;
+  border: 2px solid rgb(174, 199, 255);
+  -webkit-box-shadow: 0px 0px 93px -19px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 0px 93px -19px rgb(0, 0, 0);
+  box-shadow: 0px 0px 93px -19px rgb(0, 0, 0);
+  position: relative;
+}
+.row {
+  /* background: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  height: 70px;
+}
+
+.cell {
+  /* background: green; */
+  background: rgba(174, 200, 255, 0.041);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(174, 199, 255);
+  font-size: 3rem;
+  /* color: rgb(198, 210, 236); */
+  /* width: 70px;
+  height: 70px; */
+  cursor: pointer;
+  transition: all 0.5 ease-in-out;
+  z-index: 10;
+}
+
+#snake {
+  background: rgb(174, 199, 255);
+  width: 70px;
+  height: 70px;
+  position: absolute;
+}

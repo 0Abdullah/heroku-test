@@ -1,0 +1,27 @@
+let temp;
+reversedList = list;
+node = head
+while(node) {
+    temp = node.previous
+    node.previous = list.node.next
+    node.next = list.node.previous
+    node=node.previous
+}
+temp = list.head
+list.head = list.tail
+list.tail = temp
+
+
+reverse a double linked list = safe swapping 
+
+null *1* 2 3 4 5 null = 2 1 null 3 4 5 null
+null 1 *2* 3 4 5 null = 2 3 2 1
+null 1 2 *3* 4 5 null
+null 1 2 3 *4* 5 null
+null 1 2 3 4 *5* null
+
+null *1* 2 3 4 null
+*2* 1 null 3 4 null
+
+
+

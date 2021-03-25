@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,200&display=swap");
+* {
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: all 0.1s ease-in-out;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+input {
+  border-radius: 10px 0 0 10px;
+  border: 1px gray solid;
+  padding: 0 1rem;
+  font-size: 2rem;
+  width: 50vw;
+  max-width: 750px;
+  height: 100%;
+}
+
+#output-container {
+  font-size: 5rem;
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#input-container {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 850px) {
+  #output-container {
+    font-size: 4rem;
+  }
+
+  #input-container,
+  input {
+    width: 70vw;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #output-container {
+    font-size: 3rem;
+  }
+
+  #input-container,
+  input {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #output-container {
+    font-size: 2rem;
+  }
+
+  #input-container,
+  input {
+    width: 50vw;
+  }
+}
+
+#input-btn {
+  height: 100%;
+  border-radius: 0 10px 10px 0;
+  border: 1px gray solid;
+  border-left: none;
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+#input-btn:hover {
+  transform: translateY(-1px);
+  background: white;
+}
+
+#input-btn:active {
+  transform: translateY(1px);
+}
+
+#output-title {
+  font-size: 1.5rem;
+  display: none;
+}
+
+/* loading animation */
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+}
+.loader {
+  /* margin: 60px auto; */
+  font-size: 2rem;
+  position: relative;
+  margin-top: 3.1rem;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-right: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1.1em solid rgba(0, 0, 0, 0.2);
+  border-left: 1.1em solid #000000;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
